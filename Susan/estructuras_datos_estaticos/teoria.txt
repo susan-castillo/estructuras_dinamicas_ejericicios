@@ -1,0 +1,11 @@
+Estructuras de datos estáticos:
+
+-> Estáticos:
+1. Arreglos
+2. Archivos
+3. Cadena
+
+-> Dinámicos:
+1. Grafos
+2. Arboles
+3. Lista
