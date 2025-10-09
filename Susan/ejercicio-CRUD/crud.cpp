@@ -12,7 +12,7 @@ const int maxContacts = 100;
 Contact agenda[maxContacts];
 int totalContacts = 0;
 
-void showAgenda(Contact agenda[], int n){
+void showAgenda(Contact agendina[], int n){
     cout << "Agenda de Contactos:" << endl;
 
     if(n == 0){
