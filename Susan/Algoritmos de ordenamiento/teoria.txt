@@ -1,0 +1,34 @@
+ALGORITMOS DE ORDENAMIENTOS
+
+VisualGo (Página para visualizar dichos ordenamientos)
+
+- Método de insercción
+    - Es como una doble verificacion, quien tiene a su derecha e izquierda
+    - Se saca el primer elemento
+    - El siguiente elemento se compara, es decir se verifica si es mayor al elemento extraido.
+      de ser mayor entonces el elemento se mueve un espacio a la derecha y el elemento extraido corre a la posición en la que estaba el elemento mayor.
+- Método burbuja (Bubble sort)
+    - Compara valores adyacentes
+    - Vamos tomando por pares y se va comparndos i el de la izquierda es el numero de mayor, de serlo hace un intercambio, de no hacerlo no hace nada.
+      y asi sucesivamente hasta llegar a ordenarlos de menor a mayor.  
+- Por Selección
+    - Es el mas ineficiente.
+    - Busca el elemento menor y se coloca en la primera posición
+    - Ese primer elemento se asume que es el menor elemento de la lista, por lo que se comienza a comparar con los demas elementos de la lista
+      en dado caso de encontrar un elemento mucho menor, entonces se le asigna el valor menor y asi sucesivamente hasta ordenarlos.
+
+TIEMPO DE COMPLEJIDAD
+Es el tiempo de ejecución de un algoritmo de acuerdo a la cantidad de elementos que se tienen.
+Si este tiempo se puede representar a traves de una función:
+
+Tiempo de ejecución excelente:
+- Logaritmica
+- lineal
+
+Tiempo de ejecución malo
+- Factorial
+- Cuadrática
+- Potencial
+
+ALGORITMOS DE BUSQUEDA
+- Algoritmo de busqueda binaria
