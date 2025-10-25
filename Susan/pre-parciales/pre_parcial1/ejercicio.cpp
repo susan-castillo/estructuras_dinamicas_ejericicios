@@ -56,8 +56,13 @@ void buscarUniversidad(Universidad u){
   getline(cin, nombre);
 
   for (int i=0; i < cantidad_facultades; i++){
-    if(nombre == u.nombre){
-      if()
+    if (u.nombre == nombre){
+      cout << "Universidad encontrada: " << u.nombre << "\n";
+      return;
+    }
+    else {
+      cout << "Universidad no encontrada\n";
+      return;
     }
   }  
 }
