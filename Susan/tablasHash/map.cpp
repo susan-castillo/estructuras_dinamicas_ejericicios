@@ -4,8 +4,8 @@
 #include <unordered_map>
 using namespace std;
 
-void insertar(unordered_set<string>& tablaHash, const string& valor){
-    auto resultado = tablaHash.insert(valor);
+void insertar(unordered_set<string>& tablaHash, const string& valor, int edad){
+    auto resultado = tablaHash.insert({valor, edad});
     // second: true /
     if(resultado.second){
         cout << "Se agrego correctamente" << endl;
@@ -50,22 +50,6 @@ void limpiarMemoria(unordered_set<string>& tablaHash){
 }
 
 int main(){
-/*     unordered_set<string> nombres;
-
-    insertar(nombres, "Ana");
-    insertar(nombres, "Luis");
-    insertar(nombres, "Latrel");
-    insertar(nombres, "Ana"); // Tendría que mostrar error
-
-    //Se muestrar los 
-    mostrar(nombres);
-
-    buscar(nombres, "Luis");
-    eliminar(nombres, "Luis");
-
-    mostrar(nombres);
-
-    limpiarMemoria(nombres); */
 
     unordered_map<string, int> edades = {
         //clave - valor
