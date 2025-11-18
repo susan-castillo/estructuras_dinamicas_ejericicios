@@ -12,7 +12,7 @@ int main(){
 
     string palabra;
 
-    //Fragmenta la palabra
+    //Fragmenta la palabra, los separa.
     stringstream ss(text);
 
     while(ss >> palabra) {
