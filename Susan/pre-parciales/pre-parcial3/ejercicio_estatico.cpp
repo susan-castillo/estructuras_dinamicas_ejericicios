@@ -138,6 +138,42 @@ void mostrarTop3(const set<Jugador>& baseDeDatos) {
     }
 }
 
+// Pasamos el set y el map por REFERENCIA (&) para que los cambios sean reales
+void eliminarJugador(set<Jugador>& baseDeDatos, unordered_map<int, Jugador>& mapaRapido, int idParaBorrar) {
+    
+    // 1. ESTILO DE TU IMAGEN: Crear el objeto temporal en una línea
+    // Sintaxis: {id, nombre, nivel, clase, poder}
+    // Solo importa el idParaBorrar, lo demás es relleno (dummy data)
+    Jugador tmp{idParaBorrar, "", 0, "", 0}; 
+
+    // 2. Buscamos usando ese objeto temporal
+    auto it = baseDeDatos.find(tmp);
+
+    // 3. Verificamos si existe
+    if (it != baseDeDatos.end()) {
+        
+        // A. Borrar del Set
+        baseDeDatos.erase(it);
+        
+        // B. Borrar del Map (Aquí basta con pasar el ID directo)
+        mapaRapido.erase(idParaBorrar); 
+
+        cout << "-> Jugador eliminado correctamente." << endl;
+    } 
+    else {
+        cout << "-> Error: No se encontro ese ID." << endl;
+    }
+
+    // Mostrar el total de jugadores restantes
+    cout << "Total jugadores restantes: " << baseDeDatos.size() << endl;
+    // Mostrar todos los jugadores restantes
+    cout << "Jugadores restantes: " << endl;
+    for (const auto& j : baseDeDatos) { 
+        cout << "ID: " << j.id << " | Nombre: " << j.nombre << " | Nivel: " << j.nivel 
+             << " | Clase: " << j.clase << " | Poder: " << j.poder << endl;
+    }
+}
+
 int main(){
 
     // REQ 1: Set ordenado por ID (gracias al operator< de la struct)
@@ -161,6 +197,9 @@ int main(){
     analizarNiveles(dbJugadores);
     filtrarPorPoder(dbJugadores, 7800);
     mostrarTop3(dbJugadores);
+
+    cout << "\nELIMINACION DE JUGADOR (ID 102 - Legolas)" << endl;
+    eliminarJugador(dbJugadores, mapaRapido, 102); // Eliminamos a Legolas (ID 102)
     
     return 0;
 }
